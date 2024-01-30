@@ -53,7 +53,7 @@ class BrandButton: UIButton {
     }
     
     // MARK: Properties for default state
-    private var defaultBackgroundColor: UIColor = .green {
+    private var defaultBackgroundColor: UIColor = DS.Colors.Button.defaultGreen {
         didSet {
             updateButtonStyle()
         }
@@ -65,33 +65,33 @@ class BrandButton: UIButton {
         }
     }
     
-    private var defaultTitleColor: UIColor = .white {
+    private var defaultTitleColor: UIColor = DS.Colors.Button.neutralsWhite {
         didSet {
             updateButtonStyle()
         }
     }
     
     // MARK: Properties for highlighted state
-    private var highlightedBackgroundColor: UIColor = .darkGray {
+    private var highlightedBackgroundColor: UIColor = DS.Colors.Button.backgroundGreen {
         didSet {
             updateButtonStyle()
         }
     }
     
-    private var highlightedBorderColor: UIColor = .clear {
+    private var highlightedBorderColor: UIColor = DS.Colors.Button.highlightedGreen {
         didSet {
             updateButtonStyle()
         }
     }
     
-    private var highlightedTitleColor: UIColor = .white {
+    private var highlightedTitleColor: UIColor = DS.Colors.Button.highlightedGreen {
         didSet {
             updateButtonStyle()
         }
     }
     
     // MARK: Properties for disabled state
-    private var disabledBackgroundColor: UIColor = .lightGray {
+    private var disabledBackgroundColor: UIColor = DS.Colors.Button.backgroundDisabled {
         didSet {
             updateButtonStyle()
         }
@@ -103,7 +103,7 @@ class BrandButton: UIButton {
         }
     }
     
-    private var disabledTitleColor: UIColor = .gray {
+    private var disabledTitleColor: UIColor = DS.Colors.Button.neutralsWhite {
         didSet {
             updateButtonStyle()
         }
@@ -114,6 +114,7 @@ class BrandButton: UIButton {
         titleLabel?.font = UIFont.systemFont(ofSize: 15) // Proxima Nova
         contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         layer.cornerRadius = 4
+        layer.borderWidth = 1
         clipsToBounds = true
         
         updateButtonStyle()
@@ -158,30 +159,62 @@ class BrandButton: UIButton {
     private func updateColorStyle() {
         switch colorStyle {
         case .mainGreen:
-            defaultBackgroundColor = .green
-            defaultBorderColor = .clear
-            defaultTitleColor = .white
-            
-            highlightedBackgroundColor = .darkGray
-            highlightedBorderColor = .clear
-            highlightedTitleColor = .white
-            
-            disabledBackgroundColor = .lightGray
-            disabledBorderColor = .clear
-            disabledTitleColor = .white
+            switch style {
+            case .primary:
+                defaultBackgroundColor = DS.Colors.Button.defaultGreen
+                defaultBorderColor = .clear
+                defaultTitleColor = DS.Colors.Button.neutralsWhite
+                
+                highlightedBackgroundColor = DS.Colors.Button.highlightedGreen
+                highlightedBorderColor = .clear
+                highlightedTitleColor = DS.Colors.Button.neutralsWhite
+                
+                disabledBackgroundColor = DS.Colors.Button.backgroundDisabled
+                disabledBorderColor = .clear
+                disabledTitleColor = DS.Colors.Button.neutralsWhite
+
+            case .secondary:
+                defaultBackgroundColor = DS.Colors.Button.neutralsWhite
+                defaultBorderColor = DS.Colors.Button.defaultGreen
+                defaultTitleColor = DS.Colors.Button.defaultGreen
+                
+                highlightedBackgroundColor = DS.Colors.Button.backgroundGreen
+                highlightedBorderColor = DS.Colors.Button.highlightedGreen
+                highlightedTitleColor = DS.Colors.Button.highlightedGreen
+                
+                disabledBackgroundColor = DS.Colors.Button.neutralsWhite
+                disabledBorderColor = DS.Colors.Button.backgroundDisabled
+                disabledTitleColor = DS.Colors.Button.backgroundDisabled
+            }
             
         case .mainBlue:
-            defaultBackgroundColor = .blue
-            defaultBorderColor = .clear
-            defaultTitleColor = .white
-            
-            highlightedBackgroundColor = .darkGray
-            highlightedBorderColor = .clear
-            highlightedTitleColor = .white
-            
-            disabledBackgroundColor = .lightGray
-            disabledBorderColor = .clear
-            disabledTitleColor = .gray
+            switch style {
+            case .primary:
+                defaultBackgroundColor = DS.Colors.Button.defaultBlue
+                defaultBorderColor = .clear
+                defaultTitleColor = .white
+                
+                highlightedBackgroundColor = DS.Colors.Button.highlightedBlue
+                highlightedBorderColor = .clear
+                highlightedTitleColor = .white
+                
+                disabledBackgroundColor = DS.Colors.Button.backgroundDisabled
+                disabledBorderColor = .clear
+                disabledTitleColor = DS.Colors.Button.neutralsWhite
+
+            case .secondary:
+                defaultBackgroundColor = .white
+                defaultBorderColor = DS.Colors.Button.defaultBlue
+                defaultTitleColor = DS.Colors.Button.defaultBlue
+                
+                highlightedBackgroundColor = DS.Colors.Button.backgroundBlue
+                highlightedBorderColor = DS.Colors.Button.highlightedBlue
+                highlightedTitleColor = DS.Colors.Button.highlightedBlue
+                
+                disabledBackgroundColor = DS.Colors.Button.neutralsWhite
+                disabledBorderColor = DS.Colors.Button.backgroundDisabled
+                disabledTitleColor = DS.Colors.Button.backgroundDisabled
+            }
         }
 
         updateButtonStyle()
