@@ -18,16 +18,14 @@ class BrandButton: UIButton {
         case mainBlue
     }
     
-    var style: ButtonStyle = .primary {
-        didSet {
-            updateButtonStyle()
-        }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
     }
     
-    var colorStyle: ColorStyle = .mainGreen {
-        didSet {
-            updateColorStyle()
-        }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
     }
     
     override var isEnabled: Bool {
@@ -42,15 +40,18 @@ class BrandButton: UIButton {
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
+    var style: ButtonStyle = .primary {
+        didSet {
+            updateButtonStyle()
+        }
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
+    var colorStyle: ColorStyle = .mainGreen {
+        didSet {
+            updateColorStyle()
+        }
     }
+
     
     // MARK: Properties for default state
     private var defaultBackgroundColor: UIColor = DS.Colors.Button.defaultGreen {
@@ -109,6 +110,18 @@ class BrandButton: UIButton {
         }
     }
     
+    var leadingIcon: UIImage? {
+        didSet {
+            updateButtonStyle()
+        }
+    }
+
+    var trailingIcon: UIImage? {
+        didSet {
+            updateButtonStyle()
+        }
+    }
+    
     private func commonInit() {
         setTitleColor(.white, for: .normal)
         titleLabel?.font = UIFont.systemFont(ofSize: 15) // Proxima Nova
@@ -154,6 +167,23 @@ class BrandButton: UIButton {
         self.backgroundColor = backgroundColor
         layer.borderColor = borderColor.cgColor
         setTitleColor(titleColor, for: .normal)
+        
+        if let leadingIcon = leadingIcon {
+            setImage(leadingIcon, for: .normal)
+            setImage(leadingIcon, for: .highlighted)
+            
+            titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
+            imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 8)
+            self.semanticContentAttribute = .forceLeftToRight
+        }
+
+        if let trailingIcon = trailingIcon {
+            setImage(trailingIcon, for: .normal)
+            setImage(trailingIcon, for: .highlighted)
+            titleEdgeInsets.right = trailingIcon.size.width + 8
+            imageEdgeInsets.right = -8
+            self.semanticContentAttribute = .forceRightToLeft
+        }
     }
     
     private func updateColorStyle() {
