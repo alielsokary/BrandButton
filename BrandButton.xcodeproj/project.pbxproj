@@ -16,6 +16,7 @@
 		417CA1282B69586800AA9118 /* BrandButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1272B69586800AA9118 /* BrandButtonTests.swift */; };
 		417CA1322B69586800AA9118 /* BrandButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1312B69586800AA9118 /* BrandButtonUITests.swift */; };
 		417CA1412B6959A400AA9118 /* BrandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1402B6959A400AA9118 /* BrandButton.swift */; };
+		417CA1432B696B6300AA9118 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1422B696B6300AA9118 /* DesignSystem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		417CA12D2B69586800AA9118 /* BrandButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrandButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		417CA1312B69586800AA9118 /* BrandButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandButtonUITests.swift; sourceTree = "<group>"; };
 		417CA1402B6959A400AA9118 /* BrandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandButton.swift; sourceTree = "<group>"; };
+		417CA1422B696B6300AA9118 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				417CA11B2B69586700AA9118 /* LaunchScreen.storyboard */,
 				417CA11E2B69586700AA9118 /* Info.plist */,
 				417CA1402B6959A400AA9118 /* BrandButton.swift */,
+				417CA1422B696B6300AA9118 /* DesignSystem.swift */,
 			);
 			path = BrandButton;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417CA1152B69586600AA9118 /* ViewController.swift in Sources */,
+				417CA1432B696B6300AA9118 /* DesignSystem.swift in Sources */,
 				417CA1112B69586600AA9118 /* AppDelegate.swift in Sources */,
 				417CA1132B69586600AA9118 /* SceneDelegate.swift in Sources */,
 				417CA1412B6959A400AA9118 /* BrandButton.swift in Sources */,
@@ -442,6 +446,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = USYCM7BRK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BrandButton/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -468,6 +473,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = USYCM7BRK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BrandButton/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
