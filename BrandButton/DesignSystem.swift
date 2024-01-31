@@ -28,4 +28,8 @@ struct DS {
 
         }
     }
+    
+    enum Fonts {
+        static let subhead2 = UIFont(name: "ProximaNova-Regular", size: 15.0)
+    }
 }

@@ -124,8 +124,8 @@ class BrandButton: UIButton {
     
     private func commonInit() {
         setTitleColor(.white, for: .normal)
-        titleLabel?.font = UIFont.systemFont(ofSize: 15) // Proxima Nova
-        contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        titleLabel?.font = DS.Fonts.subhead2
+        contentEdgeInsets = UIEdgeInsets(top: 13, left: 16, bottom: 13, right: 16)
         layer.cornerRadius = 4
         layer.borderWidth = 1
         clipsToBounds = true

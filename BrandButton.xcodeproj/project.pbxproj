@@ -17,6 +17,7 @@
 		417CA1322B69586800AA9118 /* BrandButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1312B69586800AA9118 /* BrandButtonUITests.swift */; };
 		417CA1412B6959A400AA9118 /* BrandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1402B6959A400AA9118 /* BrandButton.swift */; };
 		417CA1432B696B6300AA9118 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1422B696B6300AA9118 /* DesignSystem.swift */; };
+		417CA1482B6A0DFD00AA9118 /* Proxima Nova Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417CA1472B6A0DFD00AA9118 /* Proxima Nova Reg.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		417CA1312B69586800AA9118 /* BrandButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandButtonUITests.swift; sourceTree = "<group>"; };
 		417CA1402B6959A400AA9118 /* BrandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandButton.swift; sourceTree = "<group>"; };
 		417CA1422B696B6300AA9118 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		417CA1472B6A0DFD00AA9118 /* Proxima Nova Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Reg.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		417CA10F2B69586600AA9118 /* BrandButton */ = {
 			isa = PBXGroup;
 			children = (
+				417CA1442B69A7DF00AA9118 /* Resources */,
 				417CA1102B69586600AA9118 /* AppDelegate.swift */,
 				417CA1122B69586600AA9118 /* SceneDelegate.swift */,
 				417CA1142B69586600AA9118 /* ViewController.swift */,
@@ -128,6 +131,14 @@
 				417CA1312B69586800AA9118 /* BrandButtonUITests.swift */,
 			);
 			path = BrandButtonUITests;
+			sourceTree = "<group>";
+		};
+		417CA1442B69A7DF00AA9118 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				417CA1472B6A0DFD00AA9118 /* Proxima Nova Reg.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417CA11D2B69586700AA9118 /* LaunchScreen.storyboard in Resources */,
+				417CA1482B6A0DFD00AA9118 /* Proxima Nova Reg.ttf in Resources */,
 				417CA11A2B69586700AA9118 /* Assets.xcassets in Resources */,
 				417CA1182B69586600AA9118 /* Main.storyboard in Resources */,
 			);
