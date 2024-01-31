@@ -125,7 +125,13 @@ class BrandButton: UIButton {
     private func commonInit() {
         setTitleColor(.white, for: .normal)
         titleLabel?.font = DS.Fonts.subhead2
-        contentEdgeInsets = UIEdgeInsets(top: 13, left: 16, bottom: 13, right: 16)
+        configuration?.contentInsets = NSDirectionalEdgeInsets(
+            top: 13,
+            leading: 16,
+            bottom: 13,
+            trailing: 16
+        )
+        
         layer.cornerRadius = 4
         layer.borderWidth = 1
         clipsToBounds = true
@@ -167,21 +173,18 @@ class BrandButton: UIButton {
         self.backgroundColor = backgroundColor
         layer.borderColor = borderColor.cgColor
         setTitleColor(titleColor, for: .normal)
+        setTitleColor(titleColor, for: .highlighted)
+        setTitleColor(titleColor, for: .disabled)
         
         if let leadingIcon = leadingIcon {
-            setImage(leadingIcon, for: .normal)
-            setImage(leadingIcon, for: .highlighted)
-            
-            titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
-            imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 8)
+            configuration?.image = leadingIcon
+            configuration?.imagePadding = 12
             self.semanticContentAttribute = .forceLeftToRight
         }
-
+        
         if let trailingIcon = trailingIcon {
-            setImage(trailingIcon, for: .normal)
-            setImage(trailingIcon, for: .highlighted)
-            titleEdgeInsets.right = trailingIcon.size.width + 8
-            imageEdgeInsets.right = -8
+            configuration?.image = trailingIcon
+            configuration?.imagePadding = 12
             self.semanticContentAttribute = .forceRightToLeft
         }
     }
