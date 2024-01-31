@@ -30,8 +30,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let customButton = BrandButton()
-        customButton.style = .primary
-        customButton.colorStyle = .mainGreen
+        customButton.variant = .primary
+        customButton.style = .mainGreen
         customButton.setTitle("Primary Default", for: .normal)
         customButton.frame = CGRect(x: 50, y: 50, width: 200, height: 44)
         customButton.leadingIcon = UIImage(named: "primary-btn-icon")
@@ -40,61 +40,61 @@ class ViewController: UIViewController {
 
         view.addSubview(customButton)
         
-        button1.style = .primary
-        button1.colorStyle = .mainGreen
+        button1.variant = .primary
+        button1.style = .mainGreen
         button1.setTitle("Primary Default", for: .normal)
         
-        button2.style = .primary
-        button2.colorStyle = .mainBlue
+        button2.variant = .primary
+        button2.style = .mainBlue
         button2.setTitle("Primary Default", for: .normal)
         
-        button3.style = .primary
-        button3.colorStyle = .mainGreen
+        button3.variant = .primary
+        button3.style = .mainGreen
         button3.setTitle("Primary Default", for: .normal)
         button3.leadingIcon = UIImage(named: "primary-btn-icon")
         
-        button4.style = .primary
-        button4.colorStyle = .mainBlue
+        button4.variant = .primary
+        button4.style = .mainBlue
         button4.setTitle("Primary Default", for: .normal)
         button4.trailingIcon = UIImage(named: "primary-btn-icon")
         
-        button5.style = .primary
-        button5.colorStyle = .mainBlue
+        button5.variant = .primary
+        button5.style = .mainBlue
         button5.setTitle("Primary Disabled", for: .normal)
         button5.isEnabled = false
         
-        button6.style = .primary
-        button6.colorStyle = .mainGreen
+        button6.variant = .primary
+        button6.style = .mainGreen
         button6.setTitle("Primary Disabled", for: .normal)
         button6.leadingIcon = UIImage(named: "primary-btn-icon")
         button6.isEnabled = false
         
         
-        button7.style = .secondary
-        button7.colorStyle = .mainGreen
+        button7.variant = .secondary
+        button7.style = .mainGreen
         button7.setTitle("Secondary Default", for: .normal)
         
-        button8.style = .secondary
-        button8.colorStyle = .mainBlue
+        button8.variant = .secondary
+        button8.style = .mainBlue
         button8.setTitle("Secondary Default", for: .normal)
         
-        button9.style = .secondary
-        button9.colorStyle = .mainGreen
+        button9.variant = .secondary
+        button9.style = .mainGreen
         button9.setTitle("Secondary Default", for: .normal)
         button9.leadingIcon = UIImage(named: "secondary-btn-icon")
         
-        button10.style = .secondary
-        button10.colorStyle = .mainBlue
+        button10.variant = .secondary
+        button10.style = .mainBlue
         button10.setTitle("Secondary Default", for: .normal)
         button10.trailingIcon = UIImage(named: "secondary-btn-icon")
         
-        button11.style = .secondary
-        button11.colorStyle = .mainBlue
+        button11.variant = .secondary
+        button11.style = .mainBlue
         button11.setTitle("Secondary Disabled", for: .normal)
         button11.isEnabled = false
         
-        button12.style = .secondary
-        button12.colorStyle = .mainGreen
+        button12.variant = .secondary
+        button12.style = .mainGreen
         button12.setTitle("Secondary Disabled", for: .normal)
         button12.leadingIcon = UIImage(named: "secondary-btn-icon")
         button12.isEnabled = false
@@ -107,4 +107,3 @@ class ViewController: UIViewController {
 
 
 }
-

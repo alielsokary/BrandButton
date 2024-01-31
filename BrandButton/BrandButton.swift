@@ -8,12 +8,12 @@
 import UIKit
 
 class BrandButton: UIButton {
-    enum ButtonStyle {
+    enum Variant {
         case primary
         case secondary
     }
     
-    enum ColorStyle {
+    enum Style {
         case mainGreen
         case mainBlue
     }
@@ -40,13 +40,13 @@ class BrandButton: UIButton {
         }
     }
     
-    var style: ButtonStyle = .primary {
+    var variant: Variant = .primary {
         didSet {
             updateButtonStyle()
         }
     }
     
-    var colorStyle: ColorStyle = .mainGreen {
+    var style: Style = .mainGreen {
         didSet {
             updateColorStyle()
         }
@@ -124,13 +124,18 @@ class BrandButton: UIButton {
     
     private func commonInit() {
         setTitleColor(.white, for: .normal)
-        titleLabel?.font = DS.Fonts.subhead2
         configuration?.contentInsets = NSDirectionalEdgeInsets(
             top: 13,
             leading: 16,
             bottom: 13,
             trailing: 16
         )
+        
+        configuration?.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { container in
+            var container = container
+            container.font = DS.Fonts.subhead2
+            return container
+        }
         
         layer.cornerRadius = 4
         layer.borderWidth = 1
@@ -140,7 +145,7 @@ class BrandButton: UIButton {
     }
     
     private func updateButtonStyle() {
-        switch (style, isEnabled, isHighlighted) {
+        switch (variant, isEnabled, isHighlighted) {
         case (.primary, true, false):
             applyStyle(backgroundColor: defaultBackgroundColor,
                        borderColor: defaultBorderColor,
@@ -190,9 +195,9 @@ class BrandButton: UIButton {
     }
     
     private func updateColorStyle() {
-        switch colorStyle {
+        switch style {
         case .mainGreen:
-            switch style {
+            switch variant {
             case .primary:
                 defaultBackgroundColor = DS.Colors.Button.defaultGreen
                 defaultBorderColor = .clear
@@ -221,7 +226,7 @@ class BrandButton: UIButton {
             }
             
         case .mainBlue:
-            switch style {
+            switch variant {
             case .primary:
                 defaultBackgroundColor = DS.Colors.Button.defaultBlue
                 defaultBorderColor = .clear
