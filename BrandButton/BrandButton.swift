@@ -8,6 +8,7 @@
 import UIKit
 
 class BrandButton: UIButton {
+    
     enum Variant {
         case primary
         case secondary
@@ -16,6 +17,11 @@ class BrandButton: UIButton {
     enum Style {
         case mainGreen
         case mainBlue
+    }
+    
+    enum ButtonSize {
+        case regular
+        case medium
     }
     
     override init(frame: CGRect) {
@@ -33,7 +39,7 @@ class BrandButton: UIButton {
             updateButtonStyle()
         }
     }
-
+    
     override var isHighlighted: Bool {
         didSet {
             updateButtonStyle()
@@ -51,7 +57,13 @@ class BrandButton: UIButton {
             updateColorStyle()
         }
     }
-
+    
+    var size: ButtonSize = .regular {
+        didSet {
+            updateButtonSize()
+        }
+    }
+    
     
     // MARK: Properties for default state
     private var defaultBackgroundColor: UIColor = DS.Colors.Button.defaultGreen {
@@ -115,7 +127,7 @@ class BrandButton: UIButton {
             updateButtonStyle()
         }
     }
-
+    
     var trailingIcon: UIImage? {
         didSet {
             updateButtonStyle()
@@ -140,6 +152,18 @@ class BrandButton: UIButton {
         layer.cornerRadius = 4
         layer.borderWidth = 1
         clipsToBounds = true
+        
+        updateButtonStyle()
+        updateButtonSize()
+    }
+    
+    private func updateButtonSize() {
+        switch size {
+        case .regular:
+            frame.size = CGSize(width: 139, height: 44)
+        case .medium:
+            frame.size = CGSize(width: 175, height: 44)
+        }
         
         updateButtonStyle()
     }
@@ -210,7 +234,7 @@ class BrandButton: UIButton {
                 disabledBackgroundColor = DS.Colors.Button.backgroundDisabled
                 disabledBorderColor = .clear
                 disabledTitleColor = DS.Colors.Button.neutralsWhite
-
+                
             case .secondary:
                 defaultBackgroundColor = DS.Colors.Button.neutralsWhite
                 defaultBorderColor = DS.Colors.Button.defaultGreen
@@ -239,7 +263,7 @@ class BrandButton: UIButton {
                 disabledBackgroundColor = DS.Colors.Button.backgroundDisabled
                 disabledBorderColor = .clear
                 disabledTitleColor = DS.Colors.Button.neutralsWhite
-
+                
             case .secondary:
                 defaultBackgroundColor = .white
                 defaultBorderColor = DS.Colors.Button.defaultBlue
@@ -254,7 +278,7 @@ class BrandButton: UIButton {
                 disabledTitleColor = DS.Colors.Button.backgroundDisabled
             }
         }
-
+        
         updateButtonStyle()
     }
 }
