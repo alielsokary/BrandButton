@@ -30,6 +30,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let customButton = BrandButton()
+        customButton.variant = .primary
+        customButton.style = .mainGreen
+        customButton.setTitle("Primary Default", for: .normal)
+        customButton.titleLabel?.font = DS.Fonts.subhead2
+        customButton.size = .regular
+        customButton.fullWidth = false
+        view.addSubview(customButton)
+        
+        customButton.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            customButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            customButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+
+        ])
+
         button1.variant = .primary
         button1.style = .mainGreen
         button1.setTitle("Primary Default", for: .normal)

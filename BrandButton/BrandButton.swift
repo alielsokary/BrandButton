@@ -46,6 +46,22 @@ class BrandButton: UIButton {
         }
     }
     
+    override var intrinsicContentSize: CGSize {
+        if fullWidth {
+            frame.size.width = UIScreen.main.bounds.width
+            return CGSize(width: max(super.intrinsicContentSize.width, UIScreen.main.bounds.width),
+                          height: max(super.intrinsicContentSize.height, 44))
+        }
+        switch size {
+        case .regular:
+            return CGSize(width: max(super.intrinsicContentSize.width, 139),
+                          height: max(super.intrinsicContentSize.height, 44))
+        case .medium:
+            return CGSize(width: max(super.intrinsicContentSize.width, 175),
+                          height: max(super.intrinsicContentSize.height, 44))
+        }
+    }
+    
     var variant: Variant = .primary {
         didSet {
             updateButtonStyle()
@@ -58,18 +74,10 @@ class BrandButton: UIButton {
         }
     }
     
-    var size: ButtonSize = .regular {
-        didSet {
-            updateButtonSize()
-        }
-    }
+    var size: ButtonSize = .regular
     
-    var fullWidth: Bool = false {
-        didSet {
-            updateButtonSize()
-        }
-    }
-
+    var fullWidth: Bool = false
+    
     // MARK: Properties for default state
     private var defaultBackgroundColor: UIColor = DS.Colors.Button.defaultGreen {
         didSet {
@@ -157,22 +165,6 @@ class BrandButton: UIButton {
         layer.cornerRadius = 4
         layer.borderWidth = 1
         clipsToBounds = true
-        
-        updateButtonStyle()
-        updateButtonSize()
-    }
-    
-    private func updateButtonSize() {
-        if fullWidth {
-            frame.size.width = UIScreen.main.bounds.width
-        } else {
-            switch size {
-            case .regular:
-                frame.size.width = 139
-            case .medium:
-                frame.size.width = 175
-            }
-        }
         
         updateButtonStyle()
     }
