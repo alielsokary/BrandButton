@@ -64,7 +64,12 @@ class BrandButton: UIButton {
         }
     }
     
-    
+    var fullWidth: Bool = false {
+        didSet {
+            updateButtonSize()
+        }
+    }
+
     // MARK: Properties for default state
     private var defaultBackgroundColor: UIColor = DS.Colors.Button.defaultGreen {
         didSet {
@@ -158,11 +163,15 @@ class BrandButton: UIButton {
     }
     
     private func updateButtonSize() {
-        switch size {
-        case .regular:
-            frame.size = CGSize(width: 139, height: 44)
-        case .medium:
-            frame.size = CGSize(width: 175, height: 44)
+        if fullWidth {
+            frame.size.width = UIScreen.main.bounds.width
+        } else {
+            switch size {
+            case .regular:
+                frame.size.width = 139
+            case .medium:
+                frame.size.width = 175
+            }
         }
         
         updateButtonStyle()

@@ -29,16 +29,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let customButton = BrandButton()
-        customButton.variant = .primary
-        customButton.style = .mainGreen
-        customButton.setTitle("Primary Default", for: .normal)
-        customButton.frame = CGRect(x: 50, y: 50, width: 200, height: 44)
-        customButton.leadingIcon = UIImage(named: "primary-btn-icon")
-        customButton.isEnabled = false
-        customButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-
-        view.addSubview(customButton)
         
         button1.variant = .primary
         button1.style = .mainGreen
@@ -100,10 +90,4 @@ class ViewController: UIViewController {
         button12.isEnabled = false
 
     }
-    
-    @objc func buttonTapped() {
-        print("tabbed")
-    }
-
-
 }
