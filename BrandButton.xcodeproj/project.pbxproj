@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		411496E72B6B0DF700E5C053 /* Proxima-Nova-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 411496E62B6B0DF700E5C053 /* Proxima-Nova-Bold.ttf */; };
+		411496E92B6D98E000E5C053 /* BrandButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411496E82B6D98E000E5C053 /* BrandButtonView.swift */; };
+		411496EB2B6D996A00E5C053 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411496EA2B6D996A00E5C053 /* SwiftUIView.swift */; };
 		417CA1112B69586600AA9118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1102B69586600AA9118 /* AppDelegate.swift */; };
 		417CA1132B69586600AA9118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1122B69586600AA9118 /* SceneDelegate.swift */; };
 		417CA1152B69586600AA9118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1142B69586600AA9118 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		411496E62B6B0DF700E5C053 /* Proxima-Nova-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima-Nova-Bold.ttf"; sourceTree = "<group>"; };
+		411496E82B6D98E000E5C053 /* BrandButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandButtonView.swift; sourceTree = "<group>"; };
+		411496EA2B6D996A00E5C053 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		417CA10D2B69586600AA9118 /* BrandButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrandButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417CA1102B69586600AA9118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417CA1122B69586600AA9118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 				417CA11E2B69586700AA9118 /* Info.plist */,
 				417CA1402B6959A400AA9118 /* BrandButton.swift */,
 				417CA1422B696B6300AA9118 /* DesignSystem.swift */,
+				411496E82B6D98E000E5C053 /* BrandButtonView.swift */,
+				411496EA2B6D996A00E5C053 /* SwiftUIView.swift */,
 			);
 			path = BrandButton;
 			sourceTree = "<group>";
@@ -274,7 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				417CA1152B69586600AA9118 /* ViewController.swift in Sources */,
+				411496EB2B6D996A00E5C053 /* SwiftUIView.swift in Sources */,
 				417CA1432B696B6300AA9118 /* DesignSystem.swift in Sources */,
+				411496E92B6D98E000E5C053 /* BrandButtonView.swift in Sources */,
 				417CA1112B69586600AA9118 /* AppDelegate.swift in Sources */,
 				417CA1132B69586600AA9118 /* SceneDelegate.swift in Sources */,
 				417CA1412B6959A400AA9118 /* BrandButton.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -106,5 +107,11 @@ class ViewController: UIViewController {
         button12.leadingIcon = UIImage(named: "secondary-btn-icon")
         button12.isEnabled = false
 
+    }
+
+    @IBAction func swiftUIViewAction(_ sender: Any) {
+        let swiftUIView = SwiftUIView()
+        let vc = UIHostingController(rootView: swiftUIView)
+        present(vc, animated: true)
     }
 }
