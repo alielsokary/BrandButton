@@ -62,6 +62,8 @@ class BrandButton: UIButton {
         }
     }
     
+    // MARK: - Properties
+    
     var variant: Variant = .primary {
         didSet {
             updateButtonState()
