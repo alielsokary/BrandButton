@@ -170,32 +170,36 @@ class BrandButton: UIButton {
     }
     
     private func updateButtonStyle() {
-        switch (variant, isEnabled, isHighlighted) {
-        case (.primary, true, false):
-            applyStyle(backgroundColor: defaultBackgroundColor,
-                       borderColor: defaultBorderColor,
-                       titleColor: defaultTitleColor)
-        case (.primary, true, true):
-            applyStyle(backgroundColor: highlightedBackgroundColor,
-                       borderColor: highlightedBorderColor,
-                       titleColor: highlightedTitleColor)
-        case (.primary, false, _):
-            applyStyle(backgroundColor: disabledBackgroundColor,
-                       borderColor: disabledBorderColor,
-                       titleColor: disabledTitleColor)
-            
-        case (.secondary, true, false):
-            applyStyle(backgroundColor: defaultBackgroundColor,
-                       borderColor: defaultBorderColor,
-                       titleColor: defaultTitleColor)
-        case (.secondary, true, true):
-            applyStyle(backgroundColor: highlightedBackgroundColor,
-                       borderColor: highlightedBorderColor,
-                       titleColor: highlightedTitleColor)
-        case (.secondary, false, _):
-            applyStyle(backgroundColor: disabledBackgroundColor,
-                       borderColor: disabledBorderColor,
-                       titleColor: disabledTitleColor)
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            guard let self = self else { return }
+
+            switch (self.variant, self.isEnabled, self.isHighlighted) {
+            case (.primary, true, false):
+                self.applyStyle(backgroundColor: self.defaultBackgroundColor,
+                                borderColor: self.defaultBorderColor,
+                                titleColor: self.defaultTitleColor)
+            case (.primary, true, true):
+                self.applyStyle(backgroundColor: self.highlightedBackgroundColor,
+                                borderColor: self.highlightedBorderColor,
+                                titleColor: self.highlightedTitleColor)
+            case (.primary, false, _):
+                self.applyStyle(backgroundColor: self.disabledBackgroundColor,
+                                borderColor: self.disabledBorderColor,
+                                titleColor: self.disabledTitleColor)
+
+            case (.secondary, true, false):
+                self.applyStyle(backgroundColor: self.defaultBackgroundColor,
+                                borderColor: self.defaultBorderColor,
+                                titleColor: self.defaultTitleColor)
+            case (.secondary, true, true):
+                self.applyStyle(backgroundColor: self.highlightedBackgroundColor,
+                                borderColor: self.highlightedBorderColor,
+                                titleColor: self.highlightedTitleColor)
+            case (.secondary, false, _):
+                self.applyStyle(backgroundColor: self.disabledBackgroundColor,
+                                borderColor: self.disabledBorderColor,
+                                titleColor: self.disabledTitleColor)
+            }
         }
     }
     
