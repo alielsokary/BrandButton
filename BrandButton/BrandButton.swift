@@ -96,19 +96,9 @@ class BrandButton: UIButton {
     private var defaultBackgroundColor: UIColor {
         switch style {
         case .mainGreen:
-            switch variant {
-            case .primary:
-                return DS.Colors.Button.defaultGreen
-            case .secondary:
-                return DS.Colors.Button.neutralsWhite
-            }
+            return variant == .primary ? DS.Colors.Button.defaultGreen : DS.Colors.Button.neutralsWhite
         case .mainBlue:
-            switch variant {
-            case .primary:
-                return DS.Colors.Button.defaultBlue
-            case .secondary:
-                return DS.Colors.Button.neutralsWhite
-            }
+            return variant == .primary ? DS.Colors.Button.defaultBlue : DS.Colors.Button.neutralsWhite
         }
     }
     
