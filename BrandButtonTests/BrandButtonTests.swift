@@ -78,10 +78,25 @@ final class BrandButtonTests: XCTestCase {
     }
     
     func test_buttonState_isEnabled() {
+        sut.variant = .primary
+        sut.style = .mainGreen
         sut.isEnabled = true
         
         XCTAssertEqual(sut.backgroundColor, DS.Colors.Button.defaultGreen)
         XCTAssertEqual(sut.layer.borderColor, UIColor.clear.cgColor)
         XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.neutralsWhite)
     }
+    
+    func test_buttonState_isHighlighted() {
+        sut.variant = .secondary
+        sut.style = .mainGreen
+        sut.isEnabled = true
+        sut.isHighlighted = true
+        
+        XCTAssertEqual(sut.backgroundColor, DS.Colors.Button.backgroundGreen)
+        XCTAssertEqual(sut.layer.borderColor, DS.Colors.Button.highlightedGreen.cgColor)
+        XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.highlightedGreen)
+    }
+    
+
 }
