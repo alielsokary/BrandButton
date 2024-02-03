@@ -241,13 +241,13 @@ class BrandButton: UIButton {
         if let leadingIcon = leadingIcon {
             configuration?.image = leadingIcon
             configuration?.imagePadding = 12
-            self.semanticContentAttribute = .forceLeftToRight
+            configuration?.imagePlacement = .leading
         }
         
         if let trailingIcon = trailingIcon {
             configuration?.image = trailingIcon
             configuration?.imagePadding = 12
-            self.semanticContentAttribute = .forceRightToLeft
+            configuration?.imagePlacement = .trailing
         }
     }
 }
