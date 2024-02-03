@@ -77,7 +77,7 @@ final class BrandButtonTests: XCTestCase {
         XCTAssertEqual(sut.trailingIcon, trailingIcon)
     }
     
-    func test_buttonState_isEnabled() {
+    func test_sutState_isEnabled() {
         sut.variant = .primary
         sut.style = .mainGreen
         sut.isEnabled = true
@@ -87,7 +87,7 @@ final class BrandButtonTests: XCTestCase {
         XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.neutralsWhite)
     }
     
-    func test_buttonState_isHighlighted() {
+    func test_sutState_isHighlighted() {
         sut.variant = .secondary
         sut.style = .mainGreen
         sut.isEnabled = true
@@ -98,12 +98,29 @@ final class BrandButtonTests: XCTestCase {
         XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.highlightedGreen)
     }
     
-    func test_buttonState_isDisabled() {
+    func test_sutState_isDisabled() {
         sut.variant = .primary
         sut.style = .mainGreen
         sut.isEnabled = false
         sut.isHighlighted = false
         
+        XCTAssertEqual(sut.backgroundColor, DS.Colors.Button.backgroundDisabled)
+        XCTAssertEqual(sut.layer.borderColor, UIColor.clear.cgColor)
+        XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.neutralsWhite)
+    }
+    
+    func test_sutDisabledState_isTheSameOnTheSameVariantWithDifferentStyles() {
+        sut.variant = .primary
+        sut.style = .mainGreen
+        sut.isEnabled = false
+        sut.isHighlighted = false
+        
+        XCTAssertEqual(sut.backgroundColor, DS.Colors.Button.backgroundDisabled)
+        XCTAssertEqual(sut.layer.borderColor, UIColor.clear.cgColor)
+        XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.neutralsWhite)
+
+        sut.style = .mainBlue
+
         XCTAssertEqual(sut.backgroundColor, DS.Colors.Button.backgroundDisabled)
         XCTAssertEqual(sut.layer.borderColor, UIColor.clear.cgColor)
         XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.neutralsWhite)
