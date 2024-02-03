@@ -39,4 +39,8 @@ final class BrandButtonTests: XCTestCase {
         XCTAssertEqual(sut.layer.borderColor, DS.Colors.Button.defaultBlue.cgColor)
         XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.defaultBlue)
     }
+    
+    func testIntrinsicContentSizeForButtonHeight() {
+        XCTAssertEqual(sut.intrinsicContentSize.height, 44)
+    }
 }
