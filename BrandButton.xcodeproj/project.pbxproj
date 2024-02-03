@@ -10,6 +10,7 @@
 		411496E72B6B0DF700E5C053 /* Proxima-Nova-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 411496E62B6B0DF700E5C053 /* Proxima-Nova-Bold.ttf */; };
 		411496E92B6D98E000E5C053 /* BrandButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411496E82B6D98E000E5C053 /* BrandButtonView.swift */; };
 		411496EB2B6D996A00E5C053 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411496EA2B6D996A00E5C053 /* SwiftUIView.swift */; };
+		411496EE2B6EE1ED00E5C053 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 411496ED2B6EE1ED00E5C053 /* README.md */; };
 		417CA1112B69586600AA9118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1102B69586600AA9118 /* AppDelegate.swift */; };
 		417CA1132B69586600AA9118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1122B69586600AA9118 /* SceneDelegate.swift */; };
 		417CA1152B69586600AA9118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1142B69586600AA9118 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		411496E82B6D98E000E5C053 /* BrandButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandButtonView.swift; sourceTree = "<group>"; };
 		411496EA2B6D996A00E5C053 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		411496EC2B6ECE1200E5C053 /* BrandButton.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = BrandButton.xctestplan; sourceTree = "<group>"; };
+		411496ED2B6EE1ED00E5C053 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		417CA10D2B69586600AA9118 /* BrandButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrandButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417CA1102B69586600AA9118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417CA1122B69586600AA9118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		417CA1042B69586600AA9118 = {
 			isa = PBXGroup;
 			children = (
+				411496ED2B6EE1ED00E5C053 /* README.md */,
 				411496EC2B6ECE1200E5C053 /* BrandButton.xctestplan */,
 				417CA10F2B69586600AA9118 /* BrandButton */,
 				417CA1262B69586800AA9118 /* BrandButtonTests */,
@@ -205,6 +208,7 @@
 			files = (
 				411496E72B6B0DF700E5C053 /* Proxima-Nova-Bold.ttf in Resources */,
 				417CA11D2B69586700AA9118 /* LaunchScreen.storyboard in Resources */,
+				411496EE2B6EE1ED00E5C053 /* README.md in Resources */,
 				417CA11A2B69586700AA9118 /* Assets.xcassets in Resources */,
 				417CA1182B69586600AA9118 /* Main.storyboard in Resources */,
 			);

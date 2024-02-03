@@ -1,6 +1,8 @@
 
 # BrandButton
 
+[![iOS](https://github.com/alielsokary/BrandButton/actions/workflows/iOS.yml/badge.svg)](https://github.com/alielsokary/BrandButton/actions/workflows/iOS.yml)
+
 ## Usage
 
 #### UIKit
