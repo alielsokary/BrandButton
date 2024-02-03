@@ -43,4 +43,9 @@ final class BrandButtonTests: XCTestCase {
     func testIntrinsicContentSizeForButtonHeight() {
         XCTAssertEqual(sut.intrinsicContentSize.height, 44)
     }
+    
+    func testIntrinsicContentSizeForFullWidth() {
+        sut.fullWidth = true
+        XCTAssertEqual(sut.intrinsicContentSize.width, UIScreen.main.bounds.width)
+    }
 }
