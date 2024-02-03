@@ -116,7 +116,7 @@ class BrandButton: UIButton {
         case .mainGreen:
             return variant == .primary ? DS.Colors.Button.neutralsWhite : DS.Colors.Button.defaultGreen
         case .mainBlue:
-            return variant == .primary ? .white : DS.Colors.Button.defaultBlue
+            return variant == .primary ? DS.Colors.Button.neutralsWhite : DS.Colors.Button.defaultBlue
         }
     }
     
@@ -144,7 +144,7 @@ class BrandButton: UIButton {
         case .mainGreen:
             return variant == .primary ? DS.Colors.Button.neutralsWhite : DS.Colors.Button.highlightedGreen
         case .mainBlue:
-            return variant == .primary ? .white : DS.Colors.Button.highlightedBlue
+            return variant == .primary ? DS.Colors.Button.neutralsWhite : DS.Colors.Button.highlightedBlue
         }
     }
     
@@ -171,7 +171,7 @@ class BrandButton: UIButton {
     }
     
     private func commonInit() {
-        setTitleColor(.white, for: .normal)
+        setTitleColor(DS.Colors.Button.neutralsWhite, for: .normal)
         configuration?.contentInsets = NSDirectionalEdgeInsets(
             top: 13,
             leading: 16,

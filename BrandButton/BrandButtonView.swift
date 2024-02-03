@@ -59,7 +59,6 @@ struct BrandButtonView: UIViewRepresentable {
             button.setImage(trailingIcon, for: .normal)
             button.setImage(trailingIcon, for: .highlighted)
             button.setImage(trailingIcon, for: .disabled)
-            
             button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
         }
     }
