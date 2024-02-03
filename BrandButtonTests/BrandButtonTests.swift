@@ -76,4 +76,12 @@ final class BrandButtonTests: XCTestCase {
         XCTAssertNotNil(sut.trailingIcon)
         XCTAssertEqual(sut.trailingIcon, trailingIcon)
     }
+    
+    func test_buttonState_isEnabled() {
+        sut.isEnabled = true
+        
+        XCTAssertEqual(sut.backgroundColor, DS.Colors.Button.defaultGreen)
+        XCTAssertEqual(sut.layer.borderColor, UIColor.clear.cgColor)
+        XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.neutralsWhite)
+    }
 }
