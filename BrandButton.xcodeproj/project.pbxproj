@@ -17,7 +17,6 @@
 		417CA11A2B69586700AA9118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417CA1192B69586700AA9118 /* Assets.xcassets */; };
 		417CA11D2B69586700AA9118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417CA11B2B69586700AA9118 /* LaunchScreen.storyboard */; };
 		417CA1282B69586800AA9118 /* BrandButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1272B69586800AA9118 /* BrandButtonTests.swift */; };
-		417CA1322B69586800AA9118 /* BrandButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1312B69586800AA9118 /* BrandButtonUITests.swift */; };
 		417CA1412B6959A400AA9118 /* BrandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1402B6959A400AA9118 /* BrandButton.swift */; };
 		417CA1432B696B6300AA9118 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CA1422B696B6300AA9118 /* DesignSystem.swift */; };
 /* End PBXBuildFile section */
@@ -30,19 +29,13 @@
 			remoteGlobalIDString = 417CA10C2B69586600AA9118;
 			remoteInfo = BrandButton;
 		};
-		417CA12E2B69586800AA9118 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 417CA1052B69586600AA9118 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 417CA10C2B69586600AA9118;
-			remoteInfo = BrandButton;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		411496E62B6B0DF700E5C053 /* Proxima-Nova-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima-Nova-Bold.ttf"; sourceTree = "<group>"; };
 		411496E82B6D98E000E5C053 /* BrandButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandButtonView.swift; sourceTree = "<group>"; };
 		411496EA2B6D996A00E5C053 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		411496EC2B6ECE1200E5C053 /* BrandButton.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = BrandButton.xctestplan; sourceTree = "<group>"; };
 		417CA10D2B69586600AA9118 /* BrandButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrandButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417CA1102B69586600AA9118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417CA1122B69586600AA9118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +46,6 @@
 		417CA11E2B69586700AA9118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		417CA1232B69586800AA9118 /* BrandButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrandButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		417CA1272B69586800AA9118 /* BrandButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandButtonTests.swift; sourceTree = "<group>"; };
-		417CA12D2B69586800AA9118 /* BrandButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrandButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		417CA1312B69586800AA9118 /* BrandButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandButtonUITests.swift; sourceTree = "<group>"; };
 		417CA1402B6959A400AA9118 /* BrandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandButton.swift; sourceTree = "<group>"; };
 		417CA1422B696B6300AA9118 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,22 +65,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		417CA12A2B69586800AA9118 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		417CA1042B69586600AA9118 = {
 			isa = PBXGroup;
 			children = (
+				411496EC2B6ECE1200E5C053 /* BrandButton.xctestplan */,
 				417CA10F2B69586600AA9118 /* BrandButton */,
 				417CA1262B69586800AA9118 /* BrandButtonTests */,
-				417CA1302B69586800AA9118 /* BrandButtonUITests */,
 				417CA10E2B69586600AA9118 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,7 +83,6 @@
 			children = (
 				417CA10D2B69586600AA9118 /* BrandButton.app */,
 				417CA1232B69586800AA9118 /* BrandButtonTests.xctest */,
-				417CA12D2B69586800AA9118 /* BrandButtonUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,14 +112,6 @@
 				417CA1272B69586800AA9118 /* BrandButtonTests.swift */,
 			);
 			path = BrandButtonTests;
-			sourceTree = "<group>";
-		};
-		417CA1302B69586800AA9118 /* BrandButtonUITests */ = {
-			isa = PBXGroup;
-			children = (
-				417CA1312B69586800AA9118 /* BrandButtonUITests.swift */,
-			);
-			path = BrandButtonUITests;
 			sourceTree = "<group>";
 		};
 		417CA1442B69A7DF00AA9118 /* Resources */ = {
@@ -185,24 +160,6 @@
 			productReference = 417CA1232B69586800AA9118 /* BrandButtonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		417CA12C2B69586800AA9118 /* BrandButtonUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 417CA13D2B69586800AA9118 /* Build configuration list for PBXNativeTarget "BrandButtonUITests" */;
-			buildPhases = (
-				417CA1292B69586800AA9118 /* Sources */,
-				417CA12A2B69586800AA9118 /* Frameworks */,
-				417CA12B2B69586800AA9118 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				417CA12F2B69586800AA9118 /* PBXTargetDependency */,
-			);
-			name = BrandButtonUITests;
-			productName = BrandButtonUITests;
-			productReference = 417CA12D2B69586800AA9118 /* BrandButtonUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,10 +174,6 @@
 						CreatedOnToolsVersion = 15.2;
 					};
 					417CA1222B69586800AA9118 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 417CA10C2B69586600AA9118;
-					};
-					417CA12C2B69586800AA9118 = {
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 417CA10C2B69586600AA9118;
 					};
@@ -241,7 +194,6 @@
 			targets = (
 				417CA10C2B69586600AA9118 /* BrandButton */,
 				417CA1222B69586800AA9118 /* BrandButtonTests */,
-				417CA12C2B69586800AA9118 /* BrandButtonUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,13 +211,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		417CA1212B69586800AA9118 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		417CA12B2B69586800AA9118 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -297,14 +242,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		417CA1292B69586800AA9118 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				417CA1322B69586800AA9118 /* BrandButtonUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -312,11 +249,6 @@
 			isa = PBXTargetDependency;
 			target = 417CA10C2B69586600AA9118 /* BrandButton */;
 			targetProxy = 417CA1242B69586800AA9118 /* PBXContainerItemProxy */;
-		};
-		417CA12F2B69586800AA9118 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 417CA10C2B69586600AA9118 /* BrandButton */;
-			targetProxy = 417CA12E2B69586800AA9118 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -551,40 +483,6 @@
 			};
 			name = Release;
 		};
-		417CA13E2B69586800AA9118 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mag.BrandButtonUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BrandButton;
-			};
-			name = Debug;
-		};
-		417CA13F2B69586800AA9118 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mag.BrandButtonUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BrandButton;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -611,15 +509,6 @@
 			buildConfigurations = (
 				417CA13B2B69586800AA9118 /* Debug */,
 				417CA13C2B69586800AA9118 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		417CA13D2B69586800AA9118 /* Build configuration list for PBXNativeTarget "BrandButtonUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				417CA13E2B69586800AA9118 /* Debug */,
-				417CA13F2B69586800AA9118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

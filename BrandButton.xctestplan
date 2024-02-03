@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "C9D0237E-16D4-493E-B25F-56F2D4EE5543",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:BrandButton.xcodeproj",
+      "identifier" : "417CA10C2B69586600AA9118",
+      "name" : "BrandButton"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:BrandButton.xcodeproj",
+        "identifier" : "417CA1222B69586800AA9118",
+        "name" : "BrandButtonTests"
+      }
+    }
+  ],
+  "version" : 1
+}

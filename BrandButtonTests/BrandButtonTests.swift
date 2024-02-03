@@ -60,4 +60,20 @@ final class BrandButtonTests: XCTestCase {
         XCTAssertEqual(sut.intrinsicContentSize.width, 175)
         XCTAssertEqual(sut.intrinsicContentSize.height, 44)
     }
+    
+    func testSetLeadingIcon() {
+        let leadingIcon = UIImage(systemName: "star.fill")
+        sut.leadingIcon = leadingIcon
+        
+        XCTAssertNotNil(sut.leadingIcon)
+        XCTAssertEqual(sut.leadingIcon, leadingIcon)
+    }
+    
+    func testSetTrailingIcon() {
+        let trailingIcon = UIImage(systemName: "star.fill")
+        sut.trailingIcon = trailingIcon
+        
+        XCTAssertNotNil(sut.trailingIcon)
+        XCTAssertEqual(sut.trailingIcon, trailingIcon)
+    }
 }
