@@ -30,4 +30,13 @@ final class BrandButtonTests: XCTestCase {
         XCTAssertEqual(sut.layer.borderColor, UIColor.clear.cgColor)
         XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.neutralsWhite)
     }
+    
+    func testConfigurationForSecondaryVariant() {
+        sut.variant = .secondary
+        sut.style = .mainBlue
+        
+        XCTAssertEqual(sut.backgroundColor, DS.Colors.Button.neutralsWhite)
+        XCTAssertEqual(sut.layer.borderColor, DS.Colors.Button.defaultBlue.cgColor)
+        XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.defaultBlue)
+    }
 }
