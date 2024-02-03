@@ -54,4 +54,10 @@ final class BrandButtonTests: XCTestCase {
         XCTAssertEqual(sut.intrinsicContentSize.width, 139)
         XCTAssertEqual(sut.intrinsicContentSize.height, 44)
     }
+    
+    func testIntrinsicContentSizeForMediumSize() {
+        sut.size = .medium
+        XCTAssertEqual(sut.intrinsicContentSize.width, 175)
+        XCTAssertEqual(sut.intrinsicContentSize.height, 44)
+    }
 }
