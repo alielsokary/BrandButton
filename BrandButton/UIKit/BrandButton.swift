@@ -34,34 +34,6 @@ class BrandButton: UIButton {
         commonInit()
     }
     
-    override var isEnabled: Bool {
-        didSet {
-            updateButtonState()
-        }
-    }
-    
-    override var isHighlighted: Bool {
-        didSet {
-            updateButtonState()
-        }
-    }
-    
-    override var intrinsicContentSize: CGSize {
-        if fullWidth {
-            frame.size.width = UIScreen.main.bounds.width
-            return CGSize(width: max(super.intrinsicContentSize.width, UIScreen.main.bounds.width),
-                          height: max(super.intrinsicContentSize.height, 44))
-        }
-        switch size {
-        case .regular:
-            return CGSize(width: max(super.intrinsicContentSize.width, 139),
-                          height: max(super.intrinsicContentSize.height, 44))
-        case .medium:
-            return CGSize(width: max(super.intrinsicContentSize.width, 175),
-                          height: max(super.intrinsicContentSize.height, 44))
-        }
-    }
-    
     override func updateConfiguration() {        
         configuration?.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { container in
             var container = container
@@ -110,6 +82,34 @@ class BrandButton: UIButton {
     var trailingIcon: UIImage? {
         didSet {
             updateButtonState()
+        }
+    }
+    
+    override var isEnabled: Bool {
+        didSet {
+            updateButtonState()
+        }
+    }
+    
+    override var isHighlighted: Bool {
+        didSet {
+            updateButtonState()
+        }
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        if fullWidth {
+            frame.size.width = UIScreen.main.bounds.width
+            return CGSize(width: max(super.intrinsicContentSize.width, UIScreen.main.bounds.width),
+                          height: max(super.intrinsicContentSize.height, 44))
+        }
+        switch size {
+        case .regular:
+            return CGSize(width: max(super.intrinsicContentSize.width, 139),
+                          height: max(super.intrinsicContentSize.height, 44))
+        case .medium:
+            return CGSize(width: max(super.intrinsicContentSize.width, 175),
+                          height: max(super.intrinsicContentSize.height, 44))
         }
     }
     
