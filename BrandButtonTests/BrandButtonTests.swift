@@ -22,7 +22,7 @@ final class BrandButtonTests: XCTestCase {
         super.tearDown()
     }
     
-    func testConfigurationForPrimaryVariant() {
+    func test_configurationForPrimaryVariant_matchesPrimaryVariantSpecification() {
         sut.variant = .primary
         sut.style = .mainBlue
         
@@ -31,7 +31,7 @@ final class BrandButtonTests: XCTestCase {
         XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.neutralsWhite)
     }
     
-    func testConfigurationForSecondaryVariant() {
+    func test_configurationForSecondaryVariant_matchesSecondaryVariantSpecificiation() {
         sut.variant = .secondary
         sut.style = .mainBlue
         
@@ -40,22 +40,22 @@ final class BrandButtonTests: XCTestCase {
         XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.defaultBlue)
     }
     
-    func testIntrinsicContentSizeForButtonHeight() {
+    func test_intrinsicContentSize_matchesButtonHeight() {
         XCTAssertEqual(sut.intrinsicContentSize.height, 44)
     }
     
-    func testIntrinsicContentSizeForFullWidth() {
+    func test_fullWidthSize_matchesIntrinsicContentSizeForFullWidth() {
         sut.fullWidth = true
         XCTAssertEqual(sut.intrinsicContentSize.width, UIScreen.main.bounds.width)
     }
     
-    func testIntrinsicContentSizeForRegularSize() {
+    func test_intrinsicContentSize_matchesRegularSize() {
         sut.size = .regular
         XCTAssertEqual(sut.intrinsicContentSize.width, 139)
         XCTAssertEqual(sut.intrinsicContentSize.height, 44)
     }
     
-    func testIntrinsicContentSizeForMediumSize() {
+    func test_intrinsicContentSize_matchesMediumSize() {
         sut.size = .medium
         XCTAssertEqual(sut.intrinsicContentSize.width, 175)
         XCTAssertEqual(sut.intrinsicContentSize.height, 44)
