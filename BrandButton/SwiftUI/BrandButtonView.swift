@@ -47,22 +47,8 @@ struct BrandButtonView: UIViewRepresentable {
 
     func updateUIView(_ button: BrandButton, context: Context) {
         button.titleLabel?.font = DS.Fonts.subhead2
-
-        if let leadingIcon = leadingIcon {
-            button.setImage(leadingIcon, for: .normal)
-            button.setImage(leadingIcon, for: .highlighted)
-            button.setImage(leadingIcon, for: .disabled)
-            button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
-            button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 12)
-        }
-        
-        if let trailingIcon = trailingIcon {
-            button.setImage(trailingIcon, for: .normal)
-            button.setImage(trailingIcon, for: .highlighted)
-            button.setImage(trailingIcon, for: .disabled)
-            button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 12)
-            button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
-        }
+        let configuration = BrandButton.Configuration.plain()
+        button.configuration = configuration
     }
     
     class Coordinator: NSObject {

@@ -41,7 +41,3 @@ The primary benefit of the design system lies in its ability to customize colors
                     style: .mainGreen,
                     size: .regular)
 ```
-
----
-#### Note
-Using the new Button Configuration introduced in iOS 15 doesn't work properly in `UIViewRepresentable` so I used the deprecated `titleEdgeInsets` and `imageEdgeInsets` to properly add padding to the leading and trailing icons in the SwiftUI Button.

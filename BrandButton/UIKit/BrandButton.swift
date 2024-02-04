@@ -62,6 +62,27 @@ class BrandButton: UIButton {
         }
     }
     
+    override func updateConfiguration() {        
+        configuration?.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { container in
+            var container = container
+            container.font = DS.Fonts.subhead2
+            return container
+        }
+        
+        if let leadingIcon = leadingIcon {
+            configuration?.image = leadingIcon
+            configuration?.imagePadding = 12
+            configuration?.imagePlacement = .leading
+        }
+        
+        if let trailingIcon = trailingIcon {
+            configuration?.image = trailingIcon
+            configuration?.imagePadding = 12
+            configuration?.imagePlacement = .trailing
+        }
+        
+    }
+    
     // MARK: - Properties
     
     var variant: Variant = .primary {
@@ -179,12 +200,6 @@ class BrandButton: UIButton {
             trailing: 16
         )
         
-        configuration?.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { container in
-            var container = container
-            container.font = DS.Fonts.subhead2
-            return container
-        }
-        
         layer.cornerRadius = 4
         layer.borderWidth = 1
         clipsToBounds = true
@@ -237,17 +252,5 @@ class BrandButton: UIButton {
         setTitleColor(titleColor, for: .normal)
         setTitleColor(titleColor, for: .highlighted)
         setTitleColor(titleColor, for: .disabled)
-        
-        if let leadingIcon = leadingIcon {
-            configuration?.image = leadingIcon
-            configuration?.imagePadding = 12
-            configuration?.imagePlacement = .leading
-        }
-        
-        if let trailingIcon = trailingIcon {
-            configuration?.image = trailingIcon
-            configuration?.imagePadding = 12
-            configuration?.imagePlacement = .trailing
-        }
     }
 }

@@ -12,11 +12,13 @@ struct SwiftUIView: View {
         VStack {
             BrandButtonView(title: "Primary Default", action: { }, variant: .primary, style: .mainGreen, size: .regular)
             BrandButtonView(title: "Secondary Default", action: {
-            }, variant: .secondary, style: .mainBlue, size: .regular)
+            }, variant: .secondary, style: .mainBlue, size: .medium, leadingIcon: UIImage(named: "secondary-btn-icon"))
             BrandButtonView(title: "Secondary Default", action: {
             }, variant: .secondary, style: .mainGreen, size: .regular, fullWidth: true)
             BrandButtonView(title: "Primary Default", action: {
             }, variant: .primary, style: .mainBlue, size: .medium, leadingIcon: UIImage(named: "primary-btn-icon"))
+            BrandButtonView(title: "Primary Default", action: {
+            }, variant: .primary, style: .mainGreen, size: .regular)
         }
     }
 }
