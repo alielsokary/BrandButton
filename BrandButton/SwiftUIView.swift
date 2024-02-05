@@ -19,6 +19,9 @@ struct SwiftUIView: View {
             }, variant: .primary, style: .mainBlue, size: .medium, leadingIcon: UIImage(named: "primary-btn-icon"))
             BrandButtonView(title: "Primary Default", action: {
             }, variant: .primary, style: .mainGreen, size: .regular)
+            
+            BrandButtonView(title: "Primary Default", action: {
+            }, variant: .primary, style: .mainGreen, size: .regular).disabled(true)
         }
     }
 }
