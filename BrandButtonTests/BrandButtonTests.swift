@@ -22,7 +22,7 @@ final class BrandButtonTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_configurationForPrimaryVariant_matchesPrimaryVariantSpecification() {
+    func test_configurationForPrimaryVariant_matchesPrimaryVariantSpecifications() {
         sut.variant = .primary
         sut.style = .mainBlue
         
@@ -31,7 +31,7 @@ final class BrandButtonTests: XCTestCase {
         XCTAssertEqual(sut.titleColor(for: .normal), DS.Colors.Button.neutralsWhite)
     }
     
-    func test_configurationForSecondaryVariant_matchesSecondaryVariantSpecificiation() {
+    func test_configurationForSecondaryVariant_matchesSecondaryVariantSpecificiations() {
         sut.variant = .secondary
         sut.style = .mainBlue
         
