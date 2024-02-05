@@ -19,7 +19,7 @@ class BrandButton: UIButton {
         case mainBlue
     }
     
-    enum ButtonSize {
+    enum Size {
         case regular
         case medium
     }
@@ -77,7 +77,7 @@ class BrandButton: UIButton {
     
     /// The size of the button.
     /// Default value is `regular` and could be `medium`
-    var size: ButtonSize = .regular
+    var size: Size = .regular
     
     /// Bool value Indicates whether the button should have full width.
     /// Default value is `false`. When `ture` the button should fill the screen bounds.

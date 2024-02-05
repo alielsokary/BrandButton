@@ -11,13 +11,13 @@ struct BrandButtonView: UIViewRepresentable {
     var title: String
     var variant: BrandButton.Variant = .primary
     var style: BrandButton.Style = .mainGreen
-    var size: BrandButton.ButtonSize = .regular
+    var size: BrandButton.Size = .regular
     var fullWidth: Bool? = false
     var leadingIcon: UIImage? = nil
     var trailingIcon: UIImage? = nil
     var action: (() -> Void)?
     
-    init(title: String, action: @escaping () -> Void, variant: BrandButton.Variant, style: BrandButton.Style, size: BrandButton.ButtonSize, fullWidth: Bool? = false, leadingIcon: UIImage? = nil, trailingIcon: UIImage? = nil) {
+    init(title: String, action: @escaping () -> Void, variant: BrandButton.Variant, style: BrandButton.Style, size: BrandButton.Size, fullWidth: Bool? = false, leadingIcon: UIImage? = nil, trailingIcon: UIImage? = nil) {
         self.title = title
         self.action = action
         self.variant = variant
