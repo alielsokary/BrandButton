@@ -58,7 +58,8 @@ class BrandButton: UIButton {
     // MARK: - Properties
     
     /// The variant of the button.
-    /// It's default value is `primary`.
+    /// It determines the visual style and appearance of the button.
+    /// Default value is `primary`.
     var variant: Variant = .primary {
         didSet {
             updateButtonState()
@@ -66,7 +67,8 @@ class BrandButton: UIButton {
     }
     
     /// The style of the button.
-    /// It's default value is `mainGreen`.
+    /// It determines the color style of the button
+    /// Default value is `mainGreen`.
     var style: Style = .mainGreen {
         didSet {
             updateButtonState()
@@ -74,15 +76,15 @@ class BrandButton: UIButton {
     }
     
     /// The size of the button.
-    /// It's default value is `regular` and could be `medium`
+    /// Default value is `regular` and could be `medium`
     var size: ButtonSize = .regular
     
     /// Bool value Indicates whether the button should have full width.
-    /// It's default value is `false`. When `ture` the button should fill the screen bounds.
+    /// Default value is `false`. When `ture` the button should fill the screen bounds.
     var fullWidth: Bool = false
     
     /// An optional UIImage.
-    /// When set the button should have a visible `imagePlacement` direction to `. leading`.
+    /// When set the button should have a visible image with `imagePlacement` direction to `leading`.
     var leadingIcon: UIImage? {
         didSet {
             updateButtonState()
@@ -90,7 +92,7 @@ class BrandButton: UIButton {
     }
     
     /// An optional UIImage.
-    /// When set the button should have a visible `imagePlacement` direction to `. trailing`.
+    /// When set the button should have a visible image with `imagePlacement` direction to `trailing`.
     var trailingIcon: UIImage? {
         didSet {
             updateButtonState()
