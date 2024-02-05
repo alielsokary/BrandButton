@@ -109,18 +109,18 @@
 		417CA10F2B69586600AA9118 /* BrandButton */ = {
 			isa = PBXGroup;
 			children = (
+				417CA1102B69586600AA9118 /* AppDelegate.swift */,
+				417CA1122B69586600AA9118 /* SceneDelegate.swift */,
+				417CA1422B696B6300AA9118 /* DesignSystem.swift */,
 				411496EF2B6EF00500E5C053 /* UIKit */,
 				411496F02B6EF00C00E5C053 /* SwiftUI */,
 				417CA1142B69586600AA9118 /* ViewController.swift */,
 				411496EA2B6D996A00E5C053 /* SwiftUIView.swift */,
-				417CA1442B69A7DF00AA9118 /* Resources */,
-				417CA1102B69586600AA9118 /* AppDelegate.swift */,
-				417CA1122B69586600AA9118 /* SceneDelegate.swift */,
 				417CA1162B69586600AA9118 /* Main.storyboard */,
 				417CA1192B69586700AA9118 /* Assets.xcassets */,
+				417CA1442B69A7DF00AA9118 /* Resources */,
 				417CA11B2B69586700AA9118 /* LaunchScreen.storyboard */,
 				417CA11E2B69586700AA9118 /* Info.plist */,
-				417CA1422B696B6300AA9118 /* DesignSystem.swift */,
 			);
 			path = BrandButton;
 			sourceTree = "<group>";
